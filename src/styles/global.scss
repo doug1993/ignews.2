@@ -1,0 +1,42 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+:root{
+    --white: #FFFF;
+
+    --grey-1:#e1e1e6;
+    --grey-3: #a8a8b3;
+    --grey-8:#232327;
+    --grey-9: #121214;
+    --cyan-5:#61dafb;
+    --yellow-5: #eba417;
+    
+}
+
+@media(max-width:1080px){
+    html{
+        font-size: 93.75%;
+    }
+}
+body{ 
+    background: var(--grey-9);
+    color: var(--white);
+
+}
+body,input,textarea,select,button{
+    font: 400 1rem "ubuntu"
+
+}
+h1{
+    font-size: 2rem;
+}
+button{
+    cursor: pointer;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
