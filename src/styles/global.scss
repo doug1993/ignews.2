@@ -10,6 +10,7 @@
     --grey-1:#e1e1e6;
     --grey-3: #a8a8b3;
     --grey-8:#232327;
+    --grey-c:#1f2729;
     --grey-9: #121214;
     --cyan-5:#61dafb;
     --yellow-5: #eba417;
@@ -26,7 +27,7 @@ body{
     color: var(--white);
 
 }
-body,input,textarea,select,button{
+body,input,textarea,select{
     font: 400 1rem "ubuntu"
 
 }

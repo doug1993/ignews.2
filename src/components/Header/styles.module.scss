@@ -44,7 +44,42 @@
         width: 100%;
         background: var(--yellow-5);
       }
+    } button{ margin-left: auto;}
+
+   
+  }
+  button{ margin-left: auto;}
+
+}
+.signInButton{
+  height: 3rem;
+  border-radius: 3rem;
+  background: var(--grey-c);
+  border: none;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  justify-content: center;
+  padding: 0 1.5rem;
+  font:600 8px 'ubuntu';
+
+  svg{
+    height: 1.25rem;
+    width: 1.25rem; 
+  }
+  svg:first-child{
+    margin-right: 1rem;
+  }
+  transition: filter 0.25s;
+  &:hover{
+    filter: brightness(0.8);
+  }
+  .closeBtn{
+    color: var(--grey-3);
+    margin-left: 1rem;
+    transition: color 1s;
+    &:hover{
+      color: rgb(243, 107, 107);
     }
   }
-
 }
