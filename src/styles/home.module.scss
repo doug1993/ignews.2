@@ -8,3 +8,46 @@
 
     color: blanchedalmond;
 } }
+.divHome{
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height:calc(100vh - 4rem) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.divCon{
+   
+    max-width: 600px;
+ > span{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+    h1{
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        font-weight: 900;
+        margin-top: 2rem;
+        span{
+            color: var(--cyan-5);
+        }
+    }
+    p{
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        margin: 2rem 0 2rem 0 ;
+        span{
+            font-weight: 900;
+            color: var(--cyan-5);
+        }
+        
+    }
+    button:last-child{
+        margin-left: 8rem;
+    }
+}
+    

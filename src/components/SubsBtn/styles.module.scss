@@ -1,0 +1,22 @@
+.subBtn{
+  height: 3rem;
+  width: 15rem;
+  border: none;
+  border-radius: 2rem;
+  background: var(--yellow-5);
+  color: var(--gray-9);
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: filter 0.3s;
+
+  &:hover{
+    filter: brightness(0.8);
+  }
+
+
+}
