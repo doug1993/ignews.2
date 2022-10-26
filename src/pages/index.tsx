@@ -1,8 +1,17 @@
 import Head from 'next/head'
 import { SubBtn } from '../components/SubsBtn/SubscribeBtn'
 import styles from '../styles/home.module.scss'
+import { GetServerSideProps } from 'next'
+import { stripe } from '../services/stripe'
 
-export default function Home() {
+interface HomeProps{
+  product:{
+    priceId: string;
+    amount: number;
+  }
+}
+
+export default function Home({product}) {
  return(
   <>
    <Head>
@@ -13,7 +22,7 @@ export default function Home() {
       <span> Hey, Welcome</span>
       <h1>News about the <span>React</span> world. </h1>
       <p>Get access to all the publicatins 
-      <span> for 9.9 per month</span>
+      <span> for {product.amount} per month</span>
       </p>
       <SubBtn/>
     </section>
@@ -25,3 +34,17 @@ export default function Home() {
     
  )
 }
+ export const getServerSideProps: GetServerSideProps= async()=>{
+  const price = await stripe.prices.retrieve('price_1Lx9ujK8fEp6xiJyQuzDeydT',{
+    expand: ['product']
+  })
+
+  const product={
+    priceId: price.id,
+    amount: price.unit_amount / 100,
+  }
+return{
+  props:{ product,  }
+}
+
+ }
