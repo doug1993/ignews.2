@@ -18,4 +18,3 @@ import '../styles/global.scss'
     </NextAuthProvider>
   )
 }
-
