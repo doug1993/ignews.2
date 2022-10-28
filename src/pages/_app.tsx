@@ -1,16 +1,21 @@
-import { AppProps} from 'next/app' //adicionado para configurar tipagem
 import { Header } from '../components/Header/index'
+//SessionProvider from next-auth/react were modified version 4
+import {SessionProvider as NextAuthProvider } from 'next-auth/react'
 import '../styles/global.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+
+ 
+ export default function  MyApp({ 
+  Component, 
+  pageProps :{ session,...pageProps} ,
+ }): JSX.Element{
   return(
-    <>
+    <NextAuthProvider session={session}>
       <Header/>
       <Component {...pageProps}  />
 
     
-    </>
+    </NextAuthProvider>
   )
 }
 
-export default MyApp
