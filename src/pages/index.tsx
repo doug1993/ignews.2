@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { SubBtn } from '../components/SubsBtn/SubscribeBtn'
+import { SubsBtn } from '../components/SubsBtn/index'
 import styles from '../styles/home.module.scss'
 import { GetStaticProps } from 'next'
 import { stripe } from '../services/stripe'
@@ -24,7 +24,7 @@ export default function Home({product}) {
       <p>Get access to all the publicatins 
       <span> for {product.amount} per month</span>
       </p>
-      <SubBtn/>
+      <SubsBtn priceId={product.priceId}/>
     </section>
     <img src="/images/imgWom.svg" />
    </main>
